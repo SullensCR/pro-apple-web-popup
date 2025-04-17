@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Apple Web Popup Test</title>
+</head>
+<body>
+    <h1>Pro Apple Web Popup Test</h1>
+    
+    <button id="testButton">Show Popup</button>
+    <button id="resetCookie">Reset Cookie</button>
+
+    <script src="pro-apple-popup.js"></script>
+    <script>
+        document.getElementById('testButton').addEventListener('click', function() {
+            do_pro_apple_popup();
+        });
+
+        document.getElementById('resetCookie').addEventListener('click', function() {
+            document.cookie = "hideApplePopup=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert('Cookie reset - popup will show again');
+        });
+    </script>
+</body>
+</html>
